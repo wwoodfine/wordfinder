@@ -1,0 +1,23 @@
+import itertools
+import csv
+
+dictionary = []
+with open('/Users/williamwoodfine/Documents/CODING/Untitled.csv', 'r') as file:
+    reader = csv.reader(file)
+    for row in reader:
+        word = str(row)
+        dictionary.append(word[2:-2])
+
+
+word = input("Enter letters:")
+perm = []
+
+
+for i in range(3,len(word)):
+    for x in list(itertools.permutations(word, i+1)):
+       string=''.join(x)
+       perm.append(string)
+
+for f in perm:
+    if f in dictionary:
+        print (f)
