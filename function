@@ -2,7 +2,7 @@ import itertools
 import csv
 
 dictionary = []
-with open('/Users/williamwoodfine/Documents/CODING/Untitled.csv', 'r') as file:
+with open('/CODING/Untitled.csv', 'r') as file:
     reader = csv.reader(file)
     for row in reader:
         word = str(row)
